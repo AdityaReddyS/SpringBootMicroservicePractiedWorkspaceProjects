@@ -1,0 +1,13 @@
+
+<html xmlns:th="https://thymeleaf.org">
+    <h3 style='color:violet;text-align:center;'>  <span th:text="${#authentication.getPrincipal().getUsername()}"></span></h3>
+    <br><br>
+<span th:text="${#authentication.getPrincipal().authorities}"></span>
+    <h1 style='color:red;text-align:center'>Authorization Failed</h1>
+    <br>
+    <h3 style='color:blue;text-align:center'><a th:href="@{/bank/}">Home</a></h3>
+    <br>
+    <br>
+    <h3 style='color:blue;text-align:center'><a th:href="@{/signout}">Sign Out</a></h3>
+    
+  

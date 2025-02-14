@@ -1,0 +1,45 @@
+<html xmlns:th="https://thymeleaf.org">
+
+<h1 style="color:green;text-align:center">User Registration Form</h1>
+<br>
+
+<h3 style='color:violet;text-align:center;'>  <span th:text="${#authentication.getPrincipal().getUsername()}"></span></h3>
+    <br><br>
+<span th:text="${#authentication.getPrincipal().authorities}"></span>
+<form th:action="@{/user/register}"  th:object="${userInfo}"  method="POST">
+
+<table align="center" bgcolor="orange" border=2>
+<tr>
+<td>User Name</td>
+<td><input type="text" th:field="*{uname}"/></td>
+</tr>
+<tr>
+<td>Password</td>
+<td><input type="password" th:field="*{pwd}"/></td>
+</tr>
+<tr>
+<td>Email</td>
+<td><input type="text" th:field="*{email}"/></td>
+</tr>
+<tr>
+<td>Roles</td>
+<td><input type="checkbox" th:field="*{roles}" value="CUSTOMER" checked>CUSTOMER
+<input type="checkbox" th:field="*{roles}" value="MANAGER">MANAGER
+<input type="checkbox" th:field="*{roles}" value="VISTOR">VISTOR
+</td>
+</tr>
+<tr>
+
+
+
+<td><input type="submit" value="Register" /></td>
+<td><input type="reset" value="CANCEL" /></td>
+</tr>
+</table>
+
+</form>
+<center>
+<a th:href="@{/bank/}">Home</a>&nbsp;&nbsp;&nbsp;
+</center>
+
+</html>

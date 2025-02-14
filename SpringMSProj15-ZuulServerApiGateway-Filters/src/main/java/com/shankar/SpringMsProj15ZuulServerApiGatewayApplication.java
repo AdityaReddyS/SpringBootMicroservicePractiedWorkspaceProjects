@@ -1,0 +1,17 @@
+package com.shankar;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
+
+@SpringBootApplication
+@EnableEurekaClient
+@EnableZuulProxy
+public class SpringMsProj15ZuulServerApiGatewayApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(SpringMsProj15ZuulServerApiGatewayApplication.class, args);
+	}
+
+}

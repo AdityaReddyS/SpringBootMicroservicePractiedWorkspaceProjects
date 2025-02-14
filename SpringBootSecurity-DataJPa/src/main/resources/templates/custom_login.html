@@ -1,0 +1,37 @@
+<html xmlns:th="https://thymeleaf.org">
+
+<h1 style="color:green;text-align:center">Custom Login Form Page</h1>
+
+<form th:action="@{/login}"    method="POST">
+
+<table align="center" bgcolor="orange" border=2>
+<tr>
+<td>User Name</td>
+<td><input type="text" name="username"/></td>
+</tr>
+<tr>
+<td>Password</td>
+<td><input type="password" name="password"/></td>
+</tr>
+
+
+
+
+<tr>
+<td><input type="submit" value="Login" /></td>
+<td><input type="reset" value="CANCEL" /></td>
+</tr>
+</table>
+
+</form>
+<center>
+<a th:href="@{/bank/}">Home</a>&nbsp;&nbsp;&nbsp;
+</center>
+
+<i><span style="color:green;text-align:center" th:if="${param.error}">Invalid Credentials User Name Not Found</span></i><br>
+
+<br>
+
+<i><span style="color:green;text-align:center" th:if="${param.logout}">User Logged out Success fully</span></i><br>
+
+</html>

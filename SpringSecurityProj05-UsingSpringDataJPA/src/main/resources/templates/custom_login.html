@@ -1,0 +1,33 @@
+<html xmlns:th="https://thymeleaf.org">
+
+<h1 style="color:red;text-align:center"> Custom Login Form Page</h1>
+
+
+<form th:action="@{/login}"  method="POST">
+<table border="0" bgcolor="wheat" align="center">
+<tr>
+<td>User Name :::</td>
+<td><input type="text" name="username"></td>
+</tr>
+
+<tr>
+<td>Password :::</td>
+<td><input type="password" name="password"></td>
+</tr>
+
+
+
+<tr>
+<td><input type="submit" value="Login"></td>
+<td><input type="reset" value="cancel"></td>
+</tr>
+</table>
+</form>
+</html>
+
+
+<span style='color:green;text-align:center;' th:if="${param.error}">Invalid Login Details Authentication Failed</span><br>
+
+<span style='color:green;text-align:center;' th:if="${param.logout}">User Logged Out Sucessfully</span>
+<br>
+<h2 style='color:blue;text-align:center;'>  <a th:href="@{/bank/}">Home</a></h2>

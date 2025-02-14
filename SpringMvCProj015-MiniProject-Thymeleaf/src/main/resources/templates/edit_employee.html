@@ -1,0 +1,38 @@
+<html xmlns:th="http://www.thymeleaf.org" >
+
+<h1 style="color:green;text-align:center">Employee Updation Form</h1>
+
+<form th:action="@{/employee/edit}" method="POST" th:object="${empl}">
+
+<table align="center" bgcolor="orange" border=2>
+<tr>
+<td>Employee N0</td>
+<td><input type="text" th:field="*{empno}" readonly="true" /></td>
+</tr>
+<tr>
+<td>Employee Name</td>
+<td><input type="text" th:field="*{ename}" /></td>
+</tr>
+<tr>
+<td>Employee Job</td>
+<td><input type="text" th:field="*{job}" /></td>
+</tr>
+<tr>
+<td>Employee Salary</td>
+<td><input type="text" th:field="*{sal}" /></td>
+</tr>
+<tr>
+<td>Employee DeptNo</td>
+<td><input type="text" th:field="*{deptno}" /></td>
+</tr>
+<tr>
+
+<td><input type="submit" value="SUBMIT" /></td>
+<td><input type="reset" value="CANCEL" /></td>
+</tr>
+</table>
+
+</form>
+<center>
+<a th:href="@{/employee/.}"><img class="img_class" th:src="@{/images/home.png}" width="40" height=40 /></a>&nbsp;&nbsp;&nbsp;
+</center>
